@@ -4,16 +4,20 @@ import Bars from "./components/Bars";
 import "./App.css";
 
 // SORTS
-import quickSort from "../sorts/quicksort";
+import quickSort from "../sorts/quickSort";
 import mergeSort from "../sorts/mergeSort";
+import insertionSort from "../sorts/insertionSort";
+import selectionSort from "../sorts/selectionSort";
 
 const App = () => {
   const [arr, setArr] = useState(genRandomArray(1000, 20));
 
   useEffect(() => {
-    const arrCopy = JSON.parse(JSON.stringify(arr));
-    // quickSort(arrCopy, 0, arr.length - 1, setArr);
-    mergeSort(arrCopy, 0, arr.length - 1, setArr);
+    const arrCopy = arr.slice();
+    quickSort(arrCopy, setArr);
+    // mergeSort(arrCopy, setArr);
+    // insertionSort(arrCopy, setArr);
+    // selectionSort(arrCopy, setArr);
   }, []);
 
   return (

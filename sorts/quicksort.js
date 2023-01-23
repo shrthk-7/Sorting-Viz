@@ -1,14 +1,14 @@
 import changeState from "../utils/changeState";
 
-function swap(arr, left, right, setArr) {
+const swap = (arr, left, right, setArr) => {
   let temp = arr[left];
   arr[left] = arr[right];
   arr[right] = temp;
 
   changeState(arr, setArr);
-}
+};
 
-function partition(arr, left, right, setArr) {
+const partition = (arr, left, right, setArr) => {
   let pivot = arr[Math.floor((right + left) / 2)];
   let i = left;
   let j = right;
@@ -27,9 +27,9 @@ function partition(arr, left, right, setArr) {
   }
 
   return i;
-}
+};
 
-function quickSort(arr, left, right, setArr) {
+const quickSort = (arr, left, right, setArr) => {
   let index;
   if (arr.length > 1) {
     index = partition(arr, left, right, setArr);
@@ -41,6 +41,10 @@ function quickSort(arr, left, right, setArr) {
     }
   }
   return arr;
-}
+};
 
-export default quickSort;
+const performQuickSort = (arr, setArr) => {
+  quickSort(arr, 0, arr.length - 1, setArr);
+};
+
+export default performQuickSort;
