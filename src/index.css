@@ -6,14 +6,3 @@
 body {
   background-color: #263238;
 }
-
-.bar {
-  background-color: hsl(340, 82%, 52%);
-  width: 100%;
-  align-self: flex-end;
-}
-
-.container {
-  display: flex;
-  position: relative;
-}

@@ -1,9 +1,8 @@
-// lower it to sort faster
-let time = 100;
-// time before every swap
+let time = 0;
 const timeBetweenSwaps = 10; // in ms
 
-const changeState = (arr, setArr) => {
+const changeState = (arr, setArr, reset = false) => {
+  if (reset) time = 0;
   const arrCopy = JSON.parse(JSON.stringify(arr));
   time++;
   setTimeout(() => {

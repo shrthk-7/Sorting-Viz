@@ -47,6 +47,7 @@ const mergeSort = (arr, left, right, setArr) => {
 };
 
 const performMergeSort = (arr, setArr) => {
+  changeState(arr, setArr, true);
   mergeSort(arr, 0, arr.length - 1, setArr);
 };
 

@@ -15,4 +15,9 @@ const selectionSort = (arr, setArr) => {
   return arr;
 };
 
-export default selectionSort;
+const performSelectionSort = (arr, setArr) => {
+  changeState(arr, setArr, true);
+  selectionSort(arr, setArr);
+};
+
+export default performSelectionSort;

@@ -44,6 +44,7 @@ const quickSort = (arr, left, right, setArr) => {
 };
 
 const performQuickSort = (arr, setArr) => {
+  changeState(arr, setArr, true);
   quickSort(arr, 0, arr.length - 1, setArr);
 };
 

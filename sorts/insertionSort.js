@@ -14,4 +14,9 @@ const insertionSort = (arr, setArr) => {
   }
 };
 
-export default insertionSort;
+const performInsertionSort = (arr, setArr) => {
+  changeState(arr, setArr, true);
+  insertionSort(arr, setArr);
+};
+
+export default performInsertionSort;
